@@ -4,7 +4,7 @@ from pyrogram import filters, Client
 from TNC import app
 from config import OWNER_ID
 from pyrogram.types import Message
-from TNC.utils.daxx_ban import admin_filter
+from TNC.utils.TNC_ban import admin_filter
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 
 

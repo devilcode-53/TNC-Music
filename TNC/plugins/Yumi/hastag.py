@@ -1,10 +1,10 @@
 import requests
 from bs4 import BeautifulSoup as  BSP
-from TNC import app as DAXX
+from TNC import app as TNC
 from pyrogram import filters
 url = "https://all-hashtag.com/library/contents/ajax_generator.php"
 
-@DAXX.on_message(filters.command("hastag"))
+@TNC.on_message(filters.command("hastag"))
 async def hastag(bot, message):
     global content
     try:

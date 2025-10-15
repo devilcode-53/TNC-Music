@@ -1,4 +1,4 @@
-from TNC.utils.daxx_ban import admin_filter
+from TNC.utils.TNC_ban import admin_filter
 import os
 import csv
 from pyrogram import Client, filters

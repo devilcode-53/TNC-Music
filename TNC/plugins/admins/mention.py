@@ -2,7 +2,7 @@ import asyncio
 from pyrogram.enums import ChatType, ChatMemberStatus
 from TNC import app
 from pyrogram import filters
-from TNC.utils.daxx_ban import admin_filter
+from TNC.utils.TNC_ban import admin_filter
 
 
 

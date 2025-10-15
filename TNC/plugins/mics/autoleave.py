@@ -5,7 +5,7 @@ from pyrogram.enums import ChatType
 
 import config
 from TNC import app
-from TNC.core.call import DAXX, autoend
+from TNC.core.call import TNC, autoend
 from TNC.utils.database import get_client, is_active_chat, is_autoend
 
 
@@ -64,7 +64,7 @@ async def auto_end():
                     continue
                 autoend[chat_id] = {}
                 try:
-                    await DAXX.stop_stream(chat_id)
+                    await TNC.stop_stream(chat_id)
                 except:
                     continue
                 try:

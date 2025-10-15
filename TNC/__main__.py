@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from TNC import LOGGER, app, userbot
-from TNC.core.call import DAXX
+from TNC.core.call import TNC
 from TNC.misc import sudo
 from TNC.plugins import ALL_MODULES
 from TNC.utils.database import get_banned_users, get_gbanned
@@ -40,8 +40,8 @@ async def init():
 
     await userbot.start()
 
-    # Initialize DAXX instance
-    bot = DAXX()
+    # Initialize TNC instance
+    bot = TNC()
     await bot.start()
 
     # Stream test file

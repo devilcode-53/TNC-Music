@@ -3,7 +3,7 @@ from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageDeleteForbidden, RPCError
 from pyrogram.types import Message
-from TNC.utils.daxx_ban import admin_filter
+from TNC.utils.TNC_ban import admin_filter
 from TNC import app
 
 

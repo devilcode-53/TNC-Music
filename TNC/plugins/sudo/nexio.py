@@ -4,7 +4,7 @@ from TNC import app, userbot
 from TNC.misc import SUDOERS
 from pyrogram import * 
 from pyrogram.types import *
-from TNC.utils.daxx_ban import admin_filter
+from TNC.utils.TNC_ban import admin_filter
 
 
 

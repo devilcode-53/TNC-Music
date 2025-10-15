@@ -1,4 +1,4 @@
-from TNC.core.bot import DAXX
+from TNC.core.bot import TNC
 from TNC.core.dir import dirr
 from TNC.core.git import git
 from TNC.core.userbot import Userbot
@@ -12,7 +12,7 @@ git()
 dbb()
 heroku()
 
-app = DAXX()
+app = TNC()
 api = SafoneAPI()
 userbot = Userbot()
 

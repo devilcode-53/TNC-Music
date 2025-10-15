@@ -1,7 +1,7 @@
 import re
 from TNC import app
 from config import BOT_USERNAME
-from TNC.utils.daxx_ban import admin_filter
+from TNC.utils.TNC_ban import admin_filter
 from TNC.mongo.filtersdb import *
 from TNC.utils.filters_func import GetFIlterMessage, get_text_reason, SendFilterMessage
 from TNC.utils.yumidb import user_admin

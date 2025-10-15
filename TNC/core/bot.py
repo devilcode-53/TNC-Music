@@ -6,7 +6,7 @@ import config
 from ..logging import LOGGER
 
 
-class DAXX(Client):
+class TNC(Client):
     def __init__(self, name="ZoyuXmusicRobot"):
         LOGGER(__name__).info("Starting Bot...")
         super().__init__(
