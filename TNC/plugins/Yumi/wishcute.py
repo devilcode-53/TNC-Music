@@ -4,7 +4,7 @@ import random
 import requests
 from TNC import app 
 
-SUPPORT_CHAT = "CODEX_KA_BAAP_4ST"
+SUPPORT_CHAT = "TNCmeetup"
 
 @app.on_message(filters.command("ISwish"))
 async def wish(_, m):
