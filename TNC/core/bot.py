@@ -4,7 +4,7 @@ from pyrogram.enums import ChatMemberStatus
 from ..logging import LOGGER
 import config
 
-BOT_TOKEN = "8223270918:AAEa8LKxaygKBMi9RrT46U_3ll_Igz9Sl3A"
+LOGGER_ID= "-1003128590255"
 
 
 class TNC(Client):
