@@ -37,7 +37,7 @@ class TNC(Client):
                     f"ᴜsᴇʀɴᴀᴍᴇ : @{self.username}"
                 ),
             )
-        except (errors.ChannelInvalid, errors.PeerIdInvalid):
+        except (errors.ChannelInvalid, errors.PeerIdInvalid, ValueError):
             LOGGER(__name__).error(
                 "Bot has failed to access the log group/channel. Make sure the bot is added as admin."
             )
