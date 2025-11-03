@@ -5,7 +5,7 @@ from pyrogram.enums import ChatMemberStatus
 import config
 from ..logging import LOGGER
 
-# Set uvloop as default event loop
+# Set uvloop as the default event loop policy
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
@@ -13,14 +13,14 @@ class TNC(Client):
     def init(self):
         LOGGER(name).info("Starting Bot...")
 
-        # Proper super init — MUST include 'name'
         super().init(
-            name="TNC",  # Name for session (in-memory)
+            name="TNC",  # Required session name
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
             in_memory=True,
             max_concurrent_transmissions=7,
+            parse_mode="html",
         )
 
     async def start(self):
@@ -29,9 +29,10 @@ class TNC(Client):
 
         self.id = self.me.id
         self.name = f"{self.me.first_name} {(self.me.last_name or '')}".strip()
-        self.username = self.me.username
+        self.username = self.me.username or "NoUsername"
         self.mention = self.me.mention
 
+        # Try to send startup message to LOGGER_ID
         try:
             await self.send_message(
                 chat_id=config.LOGGER_ID,
@@ -44,11 +45,11 @@ class TNC(Client):
             )
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
             LOGGER(name).error(
-                "Bot cannot access the log group/channel. Please add it and promote as admin."
+                "❌ Bot cannot access the log group/channel. Please add it and promote as admin."
             )
         except Exception as ex:
             LOGGER(name).error(
-                f"Bot failed to send startup message. Reason: {type(ex).name}: {ex}"
+                f"❌ Bot failed to send startup message. Reason: {type(ex).name}: {ex}"
             )
 
         # Verify admin rights
@@ -56,13 +57,13 @@ class TNC(Client):
             member = await self.get_chat_member(config.LOGGER_ID, self.id)
             if member.status != ChatMemberStatus.ADMINISTRATOR:
                 LOGGER(name).error(
-                    "Please promote your bot as an admin in your log group/channel."
+                    "⚠️ Please promote your bot as an admin in your log group/channel."
                 )
         except Exception as ex:
-            LOGGER(name).warning(f"Unable to verify admin status: {ex}")
+            LOGGER(name).warning(f"⚠️ Unable to verify admin status: {ex}")
 
-        LOGGER(name).info(f"Bot started successfully as {self.name}")
+        LOGGER(name).info(f"✅ Bot started successfully as {self.name}")
 
     async def stop(self):
         await super().stop()
-        LOGGER(name).info("Bot stopped gracefully.")
+        LOGGER(name).info("🛑 Bot stopped gracefully.")
