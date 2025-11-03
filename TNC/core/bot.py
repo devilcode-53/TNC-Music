@@ -8,7 +8,7 @@ class TNC(Client):
     def init(self):
         LOGGER(name).info("Starting Bot...")
         super().init(
-            name="TNCxMUSIC",
+            name="TNCxMUSIC",  # ✅ REQUIRED when in_memory=True
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
@@ -44,7 +44,6 @@ class TNC(Client):
             LOGGER(name).warning("⚠️ Log group invalid or inaccessible. Creating a new one...")
 
             try:
-                # ✅ Step 2: Create new log group
                 new_group = await self.create_supergroup(
                     title="TNCxMUSIC Logs",
                     description="Auto-created log group for TNCxMUSIC bot."
@@ -53,7 +52,6 @@ class TNC(Client):
                 new_chat_id = new_group.id
                 LOGGER(name).info(f"✅ New log group created: {new_group.title} ({new_chat_id})")
 
-                # ✅ Step 3: Send confirmation inside new log group
                 await self.send_message(
                     chat_id=new_chat_id,
                     text=(
@@ -64,7 +62,6 @@ class TNC(Client):
                     ),
                 )
 
-                # ✅ Step 4: Update runtime config (does not modify file)
                 config.LOGGER_ID = new_chat_id
 
             except Exception as ex:
@@ -76,7 +73,7 @@ class TNC(Client):
                 f"❌ Unexpected error accessing log group/channel: {type(ex).name} - {ex}"
             )
 
-        # ✅ Step 5: Check admin status in the (possibly new) log group
+        # ✅ Step 2: Check admin status
         try:
             member = await self.get_chat_member(config.LOGGER_ID, self.id)
             if member.status != ChatMemberStatus.ADMINISTRATOR:
