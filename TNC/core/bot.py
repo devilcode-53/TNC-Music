@@ -4,8 +4,6 @@ from pyrogram.enums import ChatMemberStatus
 from ..logging import LOGGER
 import config
 
-LOGGER_ID= "-1003128590255"
-
 
 class TNC(Client):
     def __init__(self, name="TNCxMUSIC"):
