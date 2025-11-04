@@ -14,6 +14,18 @@ from config import BANNED_USERS
 
 
 async def init():
+    # --- ADDED DEBUGGING CODE ---
+    try:
+        LOGGER(__name__).info(f"--- DEBUGGING CONFIG VARS ---")
+        LOGGER(__name__).info(f"API_ID: {config.API_ID}")
+        LOGGER(__name__).info(f"API_HASH: {config.API_HASH[:5]}...{config.API_HASH[-5:]}")
+        LOGGER(__name__).info(f"BOT_TOKEN: {config.BOT_TOKEN.split(':')[0]}:...{config.BOT_TOKEN[-5:]}")
+        LOGGER(__name__).info(f"LOGGER_ID: {config.LOGGER_ID}")
+        LOGGER(__name__).info(f"--- END DEBUGGING ---")
+    except Exception as e:
+        LOGGER(__name__).error(f"Error during debug print: {e}")
+    # ------------------------------------
+
     if not any([config.STRING1, config.STRING2, config.STRING3, config.STRING4, config.STRING5]):
         LOGGER(__name__).error(
             "𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐍𝐨𝐭 𝐅𝐢𝐥𝐥𝐞𝐝, 𝐏𝐥𝐞𝐚𝐬𝐞 𝐅𝐢𝐥𝐥 𝐀 𝐏𝐲𝐫𝐨𝐠𝐫𝐚𝐦 𝐒𝐞𝐬𝐬𝐢𝐨𝐧"
