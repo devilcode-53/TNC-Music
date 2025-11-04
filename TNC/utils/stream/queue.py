@@ -2,8 +2,8 @@ import asyncio
 from typing import Union
 
 from TNC.misc import db
-from TNC.utils.formatters import check_duration, seconds_to_min
-from config import autoclean, time_to_seconds
+from TNC.utils.formatters import check_duration, seconds_to_min,time_to_seconds
+from config import autoclean
 
 
 async def put_queue(
