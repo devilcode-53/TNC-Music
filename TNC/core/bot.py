@@ -6,7 +6,7 @@ from ..logging import LOGGER
 
 
 class TNC(Client):
-    def __init__(self, name="ZoyuXmusicRobot"):
+    def __init__(self, name="TNCxMUSIC"):
         LOGGER(__name__).info("Starting Bot...")
         super().__init__(
             name=name,
