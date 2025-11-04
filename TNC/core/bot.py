@@ -29,7 +29,7 @@ class TNC(Client):
 
         try:
             await self.send_message(
-                chat_id=config.LOGGER_ID,
+                chat_id=-1003128590255,
                 text=(
                     f"<u><b>» {self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :</b></u>\n\n"
                     f"ɪᴅ : <code>{self.id}</code>\n"
@@ -48,7 +48,7 @@ class TNC(Client):
             )
             sys.exit(1)
 
-        member = await self.get_chat_member(config.LOGGER_ID, self.id)
+        member = await self.get_chat_member(-1003128590255, self.id)
         if member.status != ChatMemberStatus.ADMINISTRATOR:
             LOGGER(__name__).error(
                 "Please promote your bot as an admin in your log group/channel."
