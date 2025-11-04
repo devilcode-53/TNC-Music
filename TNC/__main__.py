@@ -44,7 +44,7 @@ async def init():
     except Exception:
         pass
 
-    await app.start()
+    # await app.start()
 
     for module in ALL_MODULES:
         importlib.import_module("TNC.plugins" + module)
