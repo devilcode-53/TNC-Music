@@ -1,7 +1,7 @@
 from pyrogram import  filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from TNC.utils.TNC_font import Fonts
+from TNC.utils.daxx_font import Fonts
 from TNC import app
 
 @app.on_message(filters.command(["ISfont", "ISfonts"]))
