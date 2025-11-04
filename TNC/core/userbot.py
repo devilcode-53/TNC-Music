@@ -57,7 +57,7 @@ class Userbot(Client):
                 pass
             assistants.append(1)
             try:
-                await self.one.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.one.send_message(-1003128590255, "Assistant Started")
             except Exception as e:
                 LOGGER(__name__).error(
                     f"Assistant Account 1 has failed to access the log Group. Error: {e} - Make sure that you have added your assistant to your log group and promoted as admin!"
@@ -80,7 +80,7 @@ class Userbot(Client):
                 pass
             assistants.append(2)
             try:
-                await self.two.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.two.send_message(-1003128590255, "Assistant Started")
             except Exception as e:
                 LOGGER(__name__).error(
                     f"Assistant Account 2 has failed to access the log Group. Error: {e} - Make sure that you have added your assistant to your log group and promoted as admin!"
@@ -102,7 +102,7 @@ class Userbot(Client):
                 pass
             assistants.append(3)
             try:
-                await self.three.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.three.send_message(-1003128590255, "Assistant Started")
             except Exception as e:
                 LOGGER(__name__).error(
                     f"Assistant Account 3 has failed to access the log Group. Error: {e} - Make sure that you have added your assistant to your log group and promoted as admin! "
@@ -124,7 +124,7 @@ class Userbot(Client):
                 pass
             assistants.append(4)
             try:
-                await self.four.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.four.send_message(-1003128590255, "Assistant Started")
             except Exception as e:
                 LOGGER(__name__).error(
                     f"Assistant Account 4 has failed to access the log Group. Error: {e} - Make sure that you have added your assistant to your log group and promoted as admin! "
@@ -146,7 +146,7 @@ class Userbot(Client):
                 pass
             assistants.append(5)
             try:
-                await self.five.send_message(config.LOGGER_ID, "Assistant Started")
+                await self.five.send_message(-1003128590255, "Assistant Started")
             except Exception as e:
                 LOGGER(__name__).error(
                     f"Assistant Account 5 has failed to access the log Group. Error: {e} - Make sure that you have added your assistant to your log group and promoted as admin! "
