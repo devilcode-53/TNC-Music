@@ -53,7 +53,7 @@ async def init():
     await userbot.start()
 
     # Initialize TNC instance
-    bot = TNC()
+    bot = TNC
     await bot.start()
 
     # Stream test file
