@@ -12,7 +12,7 @@ from ..logging import LOGGER
 MY_API_ID = 24727770  # <-- Put your API_ID here
 MY_API_HASH = "b29e54a12450d2bf91e23b5d90d5378e"  # <-- Put your API_HASH here
 MY_BOT_TOKEN = "8469011170:AAGfldtzgZV1qS-YxKs35We7X1KZiH3K8NU"  # <-- Put your BOT_TOKEN here
-MY_LOGGER_ID = -1002417142493  # <-- Put your LOGGER_ID here
+MY_LOGGER_ID = -1003128590255  # <-- Put your LOGGER_ID here
 # ------------------------------------
 
 
