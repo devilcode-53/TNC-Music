@@ -57,7 +57,7 @@ OWNER_ID = int(getenv("OWNER_ID","7804917014"))
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO", "https://github.com/sexyxcoders/SapnaMusic"
+    "UPSTREAM_REPO", "https://GitHub.com/devilcode-53/Tnc-Music"
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
