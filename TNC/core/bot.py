@@ -17,7 +17,7 @@ MY_LOGGER_ID = -1003128590255  # <-- Put your LOGGER_ID here
 
 
 class TNC(Client):
-    def __init__(self, name="ZoyuXmusicRobot"):
+    def __init__(self, name="AlyaXRobot"):
         LOGGER(__name__).info("Starting Bot...")
         super().__init__(
             name=name,
